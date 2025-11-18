@@ -1,0 +1,11 @@
+.header {
+  & a {
+    @apply underline decoration-white transition-colors hover:decoration-gray-dark;
+  }
+}
+
+.menu {
+  @apply p-[15px] max-lg:flex-col;
+  @apply max-lg:rounded-[15px] max-lg:bg-gray-light;
+  @apply max-lg:absolute max-lg:-bottom-[10px] max-lg:right-0 max-lg:translate-y-full;
+}

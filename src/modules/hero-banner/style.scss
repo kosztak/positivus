@@ -1,0 +1,25 @@
+.hero-banner {
+  @apply grid ~gap-y-[25px]/[35px] ~md:~gap-x-[40px]/[50px] md:grid-rows-[auto_auto_auto_auto];
+  @apply md:grid-cols-[380px_auto];
+  @apply lg:grid-cols-[480px_auto];
+  @apply xl:grid-cols-[530px_auto];
+
+  & > h1 {
+    @apply md:max-lg:col-span-2;
+  }
+
+  & > p {
+    @apply md:max-lg:order-2;
+  }
+
+  & > figure {
+    @apply self-center justify-self-end;
+    @apply md:row-span-3 lg:row-span-4;
+    @apply md:max-lg:order-3;
+  }
+
+  & > button {
+    @apply md:self-start md:justify-self-start;
+    @apply md:max-lg:order-4;
+  }
+}

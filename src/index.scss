@@ -1,0 +1,99 @@
+@use "styles/swiper.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white leading-tight text-black ~text-[16px]/[18px];
+  }
+
+  h1 {
+    @apply font-medium ~text-[43px]/[60px];
+  }
+
+  h2 {
+    @apply font-medium ~text-[36px]/[40px];
+  }
+
+  h3 {
+    @apply font-medium ~text-[26px]/[30px];
+  }
+
+  h4 {
+    @apply font-medium ~text-[18px]/[20px];
+  }
+
+  p {
+    @apply ~text-[16px]/[18px];
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto w-11/12 sm:w-[550px] md:w-[700px] lg:w-[930px] xl:w-[1160px] 2xl:w-[1420px];
+  }
+
+  .btn {
+    @apply rounded-[14px] ~text-[18px]/[20px] ~px-[25px]/[35px] ~py-[15px]/[20px];
+
+    &-dark {
+      @apply bg-gray-dark text-white;
+    }
+
+    &-border {
+      @apply border border-black bg-white;
+    }
+
+    &-green {
+      @apply bg-green text-gray-dark;
+    }
+  }
+
+  .label {
+    @apply w-fit rounded-[7px] px-[7px];
+
+    &-green {
+      @apply bg-green text-gray-dark;
+    }
+
+    &-white {
+      @apply bg-white text-gray-dark;
+    }
+
+    &-dark {
+      @apply bg-gray-dark text-white;
+    }
+  }
+
+  .input {
+    &-text {
+      @apply rounded-[15px] border ~px-[20px]/[30px] ~py-[15px]/[20px];
+    }
+
+    &-radio {
+      @apply hidden;
+
+      &-marker {
+        @apply box-border h-[30px] w-[30px] rounded-full border p-[7px];
+
+        &::after {
+          @apply block h-full w-full scale-0 rounded-full bg-green transition-transform content-[''];
+        }
+      }
+
+      &:checked + &-marker::after {
+        @apply scale-100;
+      }
+    }
+  }
+
+  .shadow {
+    &-base {
+      box-shadow: 0px 5px 0px 0px #191a23;
+    }
+  }
+}

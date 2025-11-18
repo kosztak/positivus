@@ -1,0 +1,5 @@
+.footer {
+  & a {
+    @apply underline transition-colors hover:text-green;
+  }
+}

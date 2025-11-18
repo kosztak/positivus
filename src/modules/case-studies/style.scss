@@ -1,0 +1,11 @@
+.case-studies {
+  @apply ~pb-[50px]/[70px] #{!important};
+
+  & .swiper-slide:not(:last-child)::after {
+    @apply absolute top-0 h-full w-0 border-white content-[''] md:right-[-40px] md:border xl:right-[-65px];
+  }
+
+  & .swiper-pagination {
+    @apply absolute inset-x-0 ~bottom-[20px]/[30px];
+  }
+}

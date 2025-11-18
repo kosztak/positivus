@@ -1,0 +1,14 @@
+.supporters-swiper {
+  & > .swiper-wrapper {
+    // @apply lg:flex lg:justify-between;
+    transition-timing-function: linear;
+  }
+
+  & .swiper-slide {
+    @apply max-w-fit;
+
+    & > img {
+      @apply h-12 w-auto grayscale;
+    }
+  }
+}

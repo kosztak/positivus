@@ -1,0 +1,19 @@
+.process-step {
+  @apply relative;
+
+  & h3 {
+    @apply sm:w-[330px] md:w-[450px] lg:w-[650px] xl:w-[850px] 2xl:w-[1100px];
+  }
+
+  & > summary::after {
+    @apply absolute h-[58px] w-[58px] content-[url(assets/images/plus-icon.png)] ~right-[30px]/[60px] max-sm:hidden;
+  }
+
+  &:open > summary::after {
+    @apply content-[url(assets/images/minus-icon.png)];
+  }
+
+  &:open > summary {
+    @apply ~mb-[20px]/[30px];
+  }
+}

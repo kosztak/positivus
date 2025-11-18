@@ -1,0 +1,29 @@
+@use "swiper/css";
+
+.swiper {
+  --swiper-theme-color: #b9ff66;
+
+  //pagination
+  --swiper-pagination-bullet-inactive-color: white;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-height: 14px;
+  --swiper-pagination-bullet-width: 14px;
+
+  &-pagination {
+    @apply flex min-h-fit grow justify-center gap-[20px];
+
+    &-lock {
+      @apply hidden;
+    }
+
+    &-bullet {
+      & path {
+        @apply fill-white;
+      }
+
+      &-active path {
+        @apply fill-green;
+      }
+    }
+  }
+}
