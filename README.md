@@ -60,7 +60,7 @@ The UI layout follows the original Figma design closely:
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/positivus.git
+git clone https://github.com/kosztak/positivus.git
 cd positivus
 npm install
 ```
